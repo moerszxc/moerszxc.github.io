@@ -1,0 +1,79 @@
+{{ define "main" }}
+
+{{ "<!--contactHeader.html-->" | safeHTML }}
+  <section class="page-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2>{{ .Title }}</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+{{ "<!--contactForm.html-->" | safeHTML }}
+  <section class="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <form id="contact-form" action="{{ .Site.Params.formspreeURL }}" method="POST" class="contact-form row">
+            <div class="col-lg-6">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="姓名"
+                name="Name"
+                required
+              />
+            </div>
+            <div class="col-lg-6">
+              <input
+                type="email"
+                class="form-control"
+                placeholder="邮箱地址"
+                name="email"
+                required
+              />
+            </div>
+            <div class="col-12">
+              <input type="text" class="form-control" placeholder="主题" name="subject" />
+            </div>
+            <div class="col-12">
+              <textarea
+                class="form-control"
+                placeholder="请填写内容"
+                required
+                cols="30"
+                rows="7"
+                name="message"
+              ></textarea>
+            </div>
+            <div class="col-6 align-self-center">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="termCondition"
+                  name="terms"
+                  required
+                />
+                <label class="form-check-label" for="termCondition">
+                  接受 <a href="#">条款与条件</a>
+                </label>
+              </div>
+            </div>
+            <div class="col-6 text-right">
+              <button id="contact-form-button" class="btn btn-primary-filled" type="submit">
+                提交
+              </button>
+            </div>
+            <div class="col-12">
+              <p id="contact-form-status" class="mt-3"></p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+{{ end }}

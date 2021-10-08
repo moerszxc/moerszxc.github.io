@@ -1,0 +1,53 @@
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-4">
+        <div class="footer-description">
+          <img src="{{ .Site.Params.logo | absURL }}" alt="logo">
+          <p>
+            {{ .Site.Params.copyright1 }}
+              </br>
+            {{ .Site.Params.copyright2 }}
+              </br>
+            {{ .Site.Params.copyright3 }}
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4">
+        <div class="footer-widget">
+          <h4>站点</h4>
+          <div class="footer-widget-list">
+            <ul>
+              {{ $sitemap := .Site.Menus.sitemap }}
+                {{ range $sitemap }}
+                  <li><a href="{{ .URL | absURL }}">{{ .Name }}</a></li>
+              {{ end }}
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4">
+        <div class="footer-widget">
+          <h4>地址</h4>
+          {{ $address := .Site.Params.address }}
+          <div class="footer-widget-list">
+            <ul>
+              <li><a href="tel:{{ $address.phone }}"><i class="ti-mobile"></i>{{ $address.phone }}</a></li> 
+              <li><a href="mailto:{{ $address.email }}"><i class="ti-email"></i>{{ $address.email }}</a></li>
+              <li><p><i class="ti-pin"></i>{{ $address.address }}</p></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+{{ $style := resources.Get "scss/non-critical.scss" | resources.ToCSS | minify }}
+<link href="{{ $style.Permalink }}" rel="stylesheet" />
+{{ $vendor := resources.Get "js/vendor.js" | minify }}
+<script src="{{ $vendor.Permalink }}"></script>
+{{ $formhandler := resources.Get "js/form-handler.js" | minify }}
+<script src="{{ $formhandler.Permalink }}"></script>
+{{ $script := resources.Get "js/script.js" | minify }}
+<script src="{{ $script.Permalink }}"></script>

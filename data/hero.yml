@@ -1,0 +1,11 @@
+---
+enable: true
+title: 站长管家
+caption: 
+description: 一款帮助站长提高工作效率的一站式掌上营销管理工具
+buttonName: 下载
+button1text: Apple Store
+button1Link: https://apps.apple.com/cn/app/%E7%AB%99%E9%95%BF%E7%AE%A1%E5%AE%B6/id1582579555
+button2text: Google Play
+button2Link: https://webmaster-helper.oss-cn-beijing.aliyuncs.com/webmaster_helper/%E7%AB%99%E9%95%BF%E5%8A%A9%E6%89%8B-website-release-v1.0.0.apk
+image: images/hero/hero-image.svg

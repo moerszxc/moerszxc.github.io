@@ -1,0 +1,47 @@
+# MAIN base
+baseURL = 'https://moerszxc.github.io'
+languageCode = 'zh'
+title = '海南摩耳数字乡村科技有限公司'
+theme = "apsho-hugo-theme"
+
+# Navigation Bar
+[[menu.main]]
+    name = "主页"
+    url = "#hero"
+    weight = 1
+
+# Footer Sitemap
+[[menu.sitemap]]
+    name = "主页"
+    url = "#"
+    weight = 1
+[[menu.sitemap]]
+    name = "联系我们"
+    url = "/contact"
+    weight = 4
+
+# Footer Address
+[params.address]
+address = "海南省海口市美兰区海秀东路48号鸿泰大厦"
+email = "contact@scsk.net"
+phone = "+86 199-3739-3773"
+
+# Footer Social
+[params.social]
+
+[params]
+
+# Header
+logo = "images/logo.png"
+logo2 = "images/logo2.png"
+formspreeURL = "https://formspree.io/mjvankow"
+googleAnalytics = "UA-175025671-2"
+
+# Footer
+footerTitle = "Get the latest app updates"
+copyright1 = "All right reserved"
+copyright2 = "Copyright © MoerTech 2021"
+copyright3 = "备案/许可证号：琼ICP备2021002527号"
+
+#contact
+email = "help@staticmania.com"
