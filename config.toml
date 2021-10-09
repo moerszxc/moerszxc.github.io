@@ -1,5 +1,5 @@
 # MAIN base
-baseURL = 'https://moerszxc.github.io'
+baseURL = 'https://www.moreszxc.cn'
 languageCode = 'zh'
 title = '海南摩耳数字乡村科技有限公司'
 theme = "apsho-hugo-theme"
